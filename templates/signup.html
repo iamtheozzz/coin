@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Calcoin - Sign Up{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="auth-container">
+    <div class="auth-box">
+        <h2>Create Account</h2>
+        <p class="auth-subtitle">Join Calcoin today</p>
+        
+        <form class="auth-form" id="signupForm">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            
+            <div class="form-group terms">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="terms" required>
+                    I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                </label>
+            </div>
+            
+            <button type="submit" class="auth-button primary">Create Account</button>
+            
+            <div class="divider">
+                <span>or sign up with</span>
+            </div>
+            
+            <button type="button" class="auth-button google">
+                <img src="{{ url_for('static', filename='images/google.svg') }}" alt="Google">
+                Continue with Google
+            </button>
+            
+            <button type="button" class="auth-button email-link">
+                Continue with Email Link
+            </button>
+        </form>
+        
+        <p class="auth-switch">
+            Already have an account? <a href="/login">Log in</a>
+        </p>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/signup.js') }}"></script>
+{% endblock %} 

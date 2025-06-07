@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Calcoin - Home{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+    <h1>Welcome to Calcoin</h1>
+    <p>Your trusted platform for cryptocurrency trading and investment.</p>
+</section>
+
+<section class="features-grid">
+    <div class="feature-card">
+        <h3>Secure Trading</h3>
+        <p>Trade with confidence using our secure platform.</p>
+    </div>
+    <div class="feature-card">
+        <h3>Real-time Market</h3>
+        <p>Access real-time market data and analytics.</p>
+    </div>
+    <div class="feature-card">
+        <h3>24/7 Support</h3>
+        <p>Get help whenever you need it.</p>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %} 

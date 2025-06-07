@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Calcoin - Bank{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bank.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="bank-dashboard">
+    <div class="balance-card">
+        <div class="balance-header">
+            <h3>Total Balance</h3>
+        </div>
+        <div class="balance-amount">$10,000.00</div>
+    </div>
+    
+    <div class="transaction-history">
+        <h3>Recent Transactions</h3>
+        <div class="transaction-list">
+            <!-- 交易历史将在这里动态加载 -->
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/bank.js') }}"></script>
+{% endblock %} 

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Calcoin - Market{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/market.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="market-section">
+    <div class="market-header">
+        <h2>Market Overview</h2>
+        <div class="market-filters">
+            <button data-filter="all" class="active">All</button>
+            <button data-filter="crypto">Crypto</button>
+            <button data-filter="stocks">Stocks</button>
+        </div>
+        <select class="market-sort">
+            <option value="price">Sort by Price</option>
+            <option value="change">Sort by Change</option>
+        </select>
+    </div>
+    
+    <div class="market-grid">
+        <div class="market-card" data-category="crypto" data-price="45000" data-change="2.5">
+            <h3>Bitcoin (BTC)</h3>
+            <div class="price">$45,000</div>
+            <div class="change positive">+2.5%</div>
+        </div>
+        <div class="market-card" data-category="crypto" data-price="3200" data-change="3.8">
+            <h3>Ethereum (ETH)</h3>
+            <div class="price">$3,200</div>
+            <div class="change positive">+3.8%</div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/market.js') }}"></script>
+{% endblock %} 

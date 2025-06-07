@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Calcoin - Calcoin{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/calcoin.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="coin-dashboard">
+    <div class="coin-info">
+        <h2>Calcoin (CAL)</h2>
+        <div class="price-info">
+            <span class="price-value">$1.00</span>
+            <span class="price-change">+5.2%</span>
+        </div>
+    </div>
+    <div class="price-chart">
+        <!-- 价格图表将在这里显示 -->
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/calcoin.js') }}"></script>
+{% endblock %} 
